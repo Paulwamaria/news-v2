@@ -14,6 +14,7 @@ def configure_request(app):
     news_source_base_url=app.config['NEWS_SOURCES_BASE_URL']
     news_articles_base_url=app.config['ARTICLES_BASE_URL']
     top_headline_base_url=app.config["TOP_HEADLINE_BASE_URL"]
+    
 
 
 def process_result(list):
@@ -43,6 +44,32 @@ def process_result(list):
 
     return news_results
 
+# process sources
+def process_sources(list):
+    '''
+    A function to help us transform the json response into a list of objects
+    Args:
+        New_list: A list of json response
+    Returns:
+        Sources results: A list source objects
+    '''
+    source_results = []
+    for item in list:
+        id = item.get('id')
+        name = item.get('name')
+        description = item.get('description')
+        url = item.get('url')
+        category=  item.get('category')
+        language = item.get('language')
+        country = item.get('country')
+
+        source_object = Source(id,name,description,url,category,language,country)
+
+        source_results.append(source_object)
+
+    return source_results
+
+
 def get_news(search_term):
     '''
     The function that will get all news from the news api in json format
@@ -67,7 +94,22 @@ def get_sources():
     '''
     A function that will help us get the news sources from the news api
     '''
-    get_sources_url = news_source_base_url.format(api_key) 
+    get_sources_url = news_source_base_url.format(api_key)
+  
 
-    with
+    with urllib.request.urlopen(get_sources_url) as url:
+        get_sources_data = url.read()
+        get_sources_response = json.loads(get_sources_data)
+
+        news_sources = None
+       
+
+        if get_sources_response['sources']:
+            get_sources_result_list = get_sources_response['sources']
+            news_sources = process_sources(get_sources_result_list)
+             
+        return news_sources
+
+
+
 
