@@ -1,6 +1,20 @@
 {% extends 'base.html' %}
 
+{% block content %}
+
+<h1 class="text-primary mt-5">Hello world {{message}}</h1>
+
+<ul>
+    {% for article in business_news %}
 
 
-<h1 class="text-primary">{{message}}</h1>
+    <li>{{article.title}}</li>
+
+
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
+
 
