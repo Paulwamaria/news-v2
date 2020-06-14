@@ -1,0 +1,64 @@
+{% macro displayNewsArticles(articlesList) %}
+
+
+
+
+<div class="row">
+    {% for article in articlesList %}
+
+
+    <div class="col-md-4">
+        <div class="d-inline-flex">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-info">By {{article.author}} on {{article.publishedAt}}}</h3>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="{{article.url_to_image}}" alt="{{article.title}} poster"
+                                    class="img-responsive">
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="text-success text-center">{{article.title}}</h3>
+                                {{article.description}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endmacro%}
+
+<!--Display sources-->
+{% macro displayNewsSources(list) %}
+
+<div class="row">
+    {% for source in list %}
+
+    <div class="col-md-3">
+        <div class="d-inline-flex mt-2">
+            <div class="card">
+                <div class="card-header">
+                    <a href="{{source.url}}">{{source.name}}</a>
+                </div>
+                <div class="card-body">
+                    {{source.description}}
+                </div>
+                <div class="card-footer">
+                    language: {{source.language}} Country: {{source.country}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+
+{% endmacro %}
