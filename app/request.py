@@ -111,5 +111,25 @@ def get_sources():
         return news_sources
 
 
+def get_top_headlines(category):
+    '''
+    A function to help us get news by category
+    '''
+    get_top_headlines_url = top_headline_base_url.format(category,api_key)
 
+    with urllib.request.urlopen(get_top_headlines_url) as url:
+        get_news_data = url.read()
+
+        get_news_response = json.loads(get_news_data)
+
+        news_results = None
+        print("*"*10,get_news_response)
+
+
+        if get_news_response['articles']:
+            news_result_list = get_news_response['articles']
+            news_results = process_result(news_result_list)
+
+
+        return news_results
 
