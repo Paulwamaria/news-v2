@@ -2,3 +2,4 @@ virt/
 instance/
 *_pyce
 __pycache__
+start.sh
