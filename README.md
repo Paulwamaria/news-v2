@@ -35,3 +35,5 @@ A web application that helps users to be in the loop with current affairs.
 * Wamaria Paul
 
 ### licence
+
+Licenced under the [MIT Licence](LICENCE)
