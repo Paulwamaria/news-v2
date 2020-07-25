@@ -3,34 +3,34 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar bg-primary"></span>
+                <span class="icon-bar bg-primary"></span>
+                <span class="icon-bar bg-primary"></span>
             </button>
             <a class="navbar-brand" href="/"> News App </a>
         </div>
         <div class="navbar-collapse collapse d-flex d-inline">
-          <div class="d-inline">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="{{url_for('main.sources')}}">sources</a></li>
-                <li><a href="{{url_for('main.tec_news')}}">Technology</a></li>
-                <li><a href="{{url_for('main.sports_news')}}">Sports</a></li>
-                <li><a href="{{url_for('main.health_news')}}">Health</a></li>
-                <li><a href="{{url_for('main.politics_news')}}">Politics</a></li>
-                <li><a href="{{url_for('main.education_news')}}">Education</a></li>
-                <li><a href="{{url_for('main.science_news')}}">Science</a></li>
-                <li><a href="{{url_for('main.entertainment_news')}}">Entertainment</a></li>
-                <li><a href="{{url_for('main.entrepreneureship_news')}}">Entrepreneureship</a></li>
-                <li><a href="{{url_for('main.food_news')}}">Food</a></li>
+            <div class="d-inline">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
 
-                <li><a href="/">Contacts</a></li>
-            </ul>
-          </div>
+                    <li><a href="{{url_for('main.sources')}}">sources</a></li>
+                    <li><a href="{{url_for('main.tec_news')}}">Technology</a></li>
+                    <li><a href="{{url_for('main.sports_news')}}">Sports</a></li>
+                    <li><a href="{{url_for('main.health_news')}}">Health</a></li>
+                    <li><a href="{{url_for('main.politics_news')}}">Politics</a></li>
+                    <li><a href="{{url_for('main.education_news')}}">Education</a></li>
+                    <li><a href="{{url_for('main.science_news')}}">Science</a></li>
+                    <li><a href="{{url_for('main.entertainment_news')}}">Entertainment</a></li>
+                    <li><a href="{{url_for('main.entrepreneureship_news')}}">Entrepreneureship</a></li>
+                    <li><a href="{{url_for('main.food_news')}}">Food</a></li>
+
+                </ul>
+            </div>
             <div class="form-group d-inline" style="margin-right:0px;">
                 <form class="form-inline" action="">
-                    <input class="form-control pl-4" type="text" placeholder="Search" name='search_query' aria-label="Search">
+                    <input class="form-control pl-4" type="text" placeholder="Search" name='search_query'
+                        aria-label="Search">
                     <button class="btn btn-outline-success " type="submit">Search</button>
                 </form>
             </div>

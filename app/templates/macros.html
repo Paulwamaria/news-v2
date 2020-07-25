@@ -10,7 +10,7 @@
     <div class="col-md-4">
         <div class="d-inline-flex">
 
-            <div class="card card-default mt-5">
+            <div class="card bg-light news-card">
                 <div class="card-header">
                     <h4 class="text-success text-center"><a href="{{article.url}}">{{article.title}}</a></h4>
 
@@ -23,8 +23,8 @@
                             <div class="col-md-6">
                                
                                 {{article.description}}
-                                <hr>
-                                <a href="{{article.url}}" class="text-center">View Full Article</a>
+                               
+                               <p> <a href="{{article.url}}" class="text-center">View Full Article</a></p>
                             </div>
                         </div>
                     </div>
@@ -33,6 +33,7 @@
                     </div>
                 </div>
             </div>
+            <hr>
         </div>
     </div>
 
@@ -49,7 +50,7 @@
 
     <div class="col-md-3">
         <div class="d-inline-flex mt-2">
-            <div class="card">
+            <div class="card bg-info source-card">
                 <div class="card-header">
                     <a href="{{source.url}}">{{source.name}}</a>
                 </div>

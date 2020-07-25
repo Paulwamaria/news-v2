@@ -1,5 +1,14 @@
-.card{
-max-height:200px ;
+.news_card{
+min-height:350px ;
+margin-top: 3px;
+margin-bottom: 3px;
+}
+.d-inline-flex{
+    margin-top: 5px;
+}
+
+.source_card{
+min-height:250px ;
 margin-top: 3px;
 margin-bottom: 3px;
 }
